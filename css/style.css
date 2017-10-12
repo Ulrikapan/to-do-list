@@ -1,0 +1,115 @@
+@charset "UTF-8";
+* {
+  font-family: 'Titillium Web', sans-serif , 微軟正黑體;
+  position: relative; }
+
+html {
+  height: auto;
+  min-height: 100%; }
+
+body {
+  background: -webkit-linear-gradient(75deg, #FF98C8, #4BC0C8);
+  background: -o-linear-gradient(75deg, #FF98C8, #4BC0C8);
+  background: linear-gradient(15deg, #FF98C8, #4BC0C8);
+  margin: 0px; }
+
+.todolist {
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 410px;
+  max-width: 500px; }
+
+.title {
+  width: 50%;
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  color: white;
+  text-align: center; }
+  .title h1 {
+    display: inline-block;
+    border-top: 5px solid;
+    padding: 0px; }
+  .title h3 {
+    margin-top: -25px; }
+
+.addtask {
+  display: inline-block;
+  margin-bottom: 15px; }
+  .addtask .inputtext {
+    display: inline-block;
+    margin-right: 10px;
+    width: 308px;
+    height: 35px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 2px; }
+    .addtask .inputtext:focus {
+      outline: none;
+      border: none; }
+  .addtask .inputbtn {
+    display: inline-block;
+    padding: 6px 25px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.4);
+    color: #FF98C8;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .addtask .inputbtn:active {
+      -webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
+      -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+      transform: translateY(2px); }
+
+.tasklist {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+  .tasklist li {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 15px 0px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-left: 10px solid #FF98C8;
+    letter-spacing: 2px;
+    display: block;
+    word-break: break-all;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.4);
+    overflow: hidden; }
+    .tasklist li:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      -webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4); }
+      .tasklist li:hover a {
+        opacity: 1;
+        background-color: #E6E6F5;
+        -webkit-box-shadow: -3px 0px 20px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: -3px 0px 20px 0px rgba(0, 0, 0, 0.2); }
+    .tasklist li a {
+      padding: 15px 5px;
+      right: 0px;
+      bottom: 0px;
+      position: absolute;
+      opacity: 0; }
+      .tasklist li a:active {
+        -webkit-box-shadow: 1px 0px 20px -7px rgba(0, 0, 0, 0.5);
+        box-shadow: 1px 0px 20px -7px rgba(0, 0, 0, 0.5); }
+
+.done {
+  text-decoration: line-through;
+  font-style: italic; }

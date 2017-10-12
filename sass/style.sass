@@ -1,0 +1,109 @@
+@mixin size($w,$h)
+  width: $w
+  height: $h
+  
+*
+  font-family: 'Titillium Web', sans-serif , 微軟正黑體
+  // border: 1px solid red
+  position: relative
+
+html
+  height: auto
+  min-height: 100%
+body
+  background: linear-gradient(15deg,#FF98C8,#4BC0C8)
+  margin: 0px
+  
+.todolist
+  display: inline-block
+  // border: 1px solid
+  left: 50%
+  transform: translateX(-50%)
+  min-width: 410px
+  max-width: 500px
+  // max-width: 410px
+  
+.title
+  width: 50%
+  min-width: 280px
+  margin-left: auto
+  margin-right: auto
+  margin-top: 50px
+  color: white
+  text-align: center
+  & h1
+    display: inline-block
+    border-top: 5px solid
+    padding: 0px 
+  & h3
+    margin-top: -25px
+    
+.addtask  
+  display: inline-block
+  margin-bottom: 15px
+  & .inputtext
+    display: inline-block
+    margin-right: 10px
+    +size(308px,35px)
+    // box-shadow: 0px 5px 5px -5px rgba(black,0.4)
+    padding: 5px 10px
+    border: none
+    font-size: 16px
+    letter-spacing: 2px
+    &:focus
+      outline: none
+      border: none
+    
+  & .inputbtn
+    display: inline-block
+    padding: 6px 25px
+    background-color: white
+    box-shadow: 0px 5px 20px -5px rgba(black,0.4)
+    color: #FF98C8
+    font-size: 18px
+    cursor: pointer
+    transition: 0.3s
+    &:active
+      box-shadow: 0px 5px 5px -5px rgba(black,0.4)
+      transform: translateY(2px)
+    
+.tasklist
+  // display: inline-block
+  list-style-type: none
+  margin: 0px
+  padding: 0px
+  // border: 1px solid
+  & li
+    background-color: rgba(white,0.7)
+    margin: 15px 0px
+    padding-left: 20px
+    padding-top: 15px
+    padding-bottom: 15px
+    border-left: 10px solid #FF98C8
+    letter-spacing: 2px
+    display: block
+    word-break: break-all
+    cursor: pointer
+    color: rgba(black,0.6)
+    font-size: 14px
+    box-shadow: 0px 5px 20px -5px rgba(black,0.4)
+    overflow: hidden
+    &:hover
+      background-color: rgba(white,0.9)
+      box-shadow: 0px 5px 5px -5px rgba(black,0.4)
+      & a
+        opacity: 1
+        background-color: #E6E6F5
+        box-shadow: -3px 0px 20px 0px rgba(black,0.2)    
+    & a
+      padding: 15px 5px
+      right: 0px
+      bottom: 0px
+      position: absolute
+      opacity: 0
+      &:active
+        box-shadow: 1px 0px 20px -7px rgba(black,0.5)
+      
+.done
+  text-decoration: line-through
+  font-style: italic
